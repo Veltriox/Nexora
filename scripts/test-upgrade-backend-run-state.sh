@@ -61,7 +61,7 @@ fi
 # docker ps --format '{{.Names}}'
 if [ "\${1-}" = "ps" ] && [ "\${2-}" = "--format" ]; then
   case "\$mode" in
-    names-running) echo "docklift-backend"; exit 0 ;;
+    names-running) echo "nexora-backend"; exit 0 ;;
     names-fail) echo "format fail" >&2; exit 1 ;;
     *) exit 0 ;;
   esac

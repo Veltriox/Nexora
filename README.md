@@ -39,7 +39,7 @@ Whether you need a lightweight self-hosted PaaS or an extensible foundation for 
 <summary><b>More screenshots</b></summary>
 
 **Project detail** — All-services workspace (deploy / build / shared env) and per-service workspace (env, domains, storage, runtime logs); single-service projects stay flat
-![Project detail](screenshots/inside%20projects.png)
+![Project detail](screenshots/project-detail.png)
 
 **Live logs** — every platform container, streamed over SSE
 ![Logs](screenshots/logs.png)
