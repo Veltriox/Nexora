@@ -336,7 +336,7 @@ sudo bash uninstall.sh -y
 ```
 
 Uninstall removes every Nexora container, image, volume and network, the build cache, and
-`/opt/Nexora` (database, deployments, backups, certificates). Other Docker workloads on the same
+`/opt/nexora` (database, deployments, backups, certificates). Other Docker workloads on the same
 host are left alone, as are Docker Engine.
 
 ### Development build
@@ -393,12 +393,12 @@ is the fastest way to get oriented in the codebase.
 
 | Command | Description |
 |---------|-------------|
-| `docker logs Nexora-backend -f` | Backend / API |
-| `docker logs Nexora-frontend -f` | Dashboard SPA |
-| `docker logs Nexora-nginx -f` | Dashboard gateway (`:8080`) |
-| `docker logs Nexora-nginx-proxy -f` | Public proxy (`:80`/`:443`) |
-| `docker logs Nexora-certbot -f` | Certificate issuance and renewals |
-| `docker ps --filter name=dl_` | List project containers |
+| `docker logs nexora-backend -f` | Backend / API |
+| `docker logs nexora-frontend -f` | Dashboard SPA |
+| `docker logs nexora-nginx -f` | Dashboard gateway (`:8080`) |
+| `docker logs nexora-nginx-proxy -f` | Public proxy (`:80`/`:443`) |
+| `docker logs nexora-certbot -f` | Certificate issuance and renewals |
+| `docker ps --filter name=nx_` | List project containers |
 
 ### 🗄️ Database
 
@@ -416,8 +416,8 @@ Run from `backend/`:
 
 | Command | Description |
 |---------|-------------|
-| `docker exec -it Nexora-backend node dist/scripts/reset-password.js` | Reset admin password |
-| `docker exec Nexora-nginx-proxy nginx -t` | Validate generated vhosts |
+| `docker exec -it nexora-backend node dist/scripts/reset-password.js` | Reset admin password |
+| `docker exec nexora-nginx-proxy nginx -t` | Validate generated vhosts |
 | `for port in {5500..5600}; do sudo fuser -k ${port}/tcp 2>/dev/null; done` | Free the app port pool |
 
 > 📖 Full command guide: [commands.md](commands.md)
