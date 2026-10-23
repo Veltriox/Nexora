@@ -1,0 +1,64 @@
+# Nexora - Ignore List
+
+# Dependencies
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# Database & Local State
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite*
+backend/prisma/memdb*
+
+# Secrets & Auto-generated credentials
+.secrets
+data/.secrets
+backend/data/.secrets
+.bootstrap-secret
+data/.bootstrap-secret
+**/.bootstrap-secret
+.setup-token
+data/.setup-token
+**/.setup-token
+*.pem
+*.key
+
+# Environment Overrides
+.env.local
+backend/.env.local
+frontend/.env.local
+**/.env.local
+
+# User Projects & Deployments
+deployments/*
+!deployments/
+
+# Nginx runtime configurations & SSL certs
+nginx-proxy/conf.d/*
+!nginx-proxy/conf.d/default.conf
+nginx-proxy/certbot/conf/*
+nginx-proxy/certbot/www/*
+backend/nginx-proxy/
+backend/data/
+
+# Logs
+*.log
+logs/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+.claude/
+.cursor/
+.agent/

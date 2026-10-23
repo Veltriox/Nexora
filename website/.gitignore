@@ -1,0 +1,5 @@
+cache
+.vitepress/cache
+.vitepress/dist
+changelog.md
+node_modules/

@@ -1,0 +1,14 @@
+{
+  "name": "nexora-root",
+  "version": "1.0.0",
+  "description": "A flexible technology brand that could expand beyond hosting into developer tools and AI infrastructure. Futuristic · Versatile",
+  "private": true,
+  "author": "Veltriox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Veltriox/Nexora.git"
+  },
+  "overrides": {
+    "@isaacs/brace-expansion": "5.0.1"
+  }
+}
